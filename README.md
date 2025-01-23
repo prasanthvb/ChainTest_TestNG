@@ -41,8 +41,7 @@ Usage
 3.Open the index.html file in the target/chaintest folder to view the test report.
 
 Sample Report
-![image](https://github.com/user-attachments/assets/affa7abb-921b-4d78-abe1-2ccdaf81158a)
-
+![image](https://github.com/user-attachments/assets/556736fb-27cf-49c8-88c8-08925176cbde)
 
 Happy testing! 🎉
 
