@@ -19,9 +19,9 @@
         <span class="ms-3 fs-6">PrasanthVB_AutomationTestDemo</span>
       </div>
       <div>
-        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 14s</span>
-        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Started 2025-01-23 12:03:38 pm</span>
-        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Ended 2025-01-23 12:03:53 pm</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 12s</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Started 2025-01-24 12:58:43 pm</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Ended 2025-01-24 12:58:56 pm</span>
       </div>
       <div>
           <button role="button" id="sys-info" class="btn btn-outline-primary smaller" title="View System Info">
@@ -48,8 +48,8 @@
                 </div>
               </div>
               <div class="card-footer small">
-                <span id="sp1">0</span> Passed,
-                <span id="sf1">1</span> Failed,
+                <span id="sp1">1</span> Passed,
+                <span id="sf1">0</span> Failed,
                 <span id="ss1">0</span> Skipped
               </div>
             </div>
@@ -65,8 +65,8 @@
                 </div>
               </div>
               <div class="card-footer small">
-                <span id="sp2">0</span> Passed,
-                <span id="sf2">1</span> Failed,
+                <span id="sp2">1</span> Passed,
+                <span id="sf2">0</span> Failed,
                 <span id="ss2">0</span> Skipped
               </div>
             </div>
@@ -82,8 +82,8 @@
                   </div>
                 </div>
                 <div class="card-footer small">
-                  <span id="sp3">1</span> Passed,
-                  <span id="sf3">1</span> Failed,
+                  <span id="sp3">2</span> Passed,
+                  <span id="sf3">0</span> Failed,
                   <span id="ss3">0</span> Skipped
                 </div>
               </div>
@@ -112,30 +112,30 @@
         </div>
       </div>
     </div>
-      <div class="test-container failed">
+      <div class="test-container passed">
         <div class="container">
           <div class="row">
             <div class="col-4">
-              <h6 class="mb-3 testname failed">Suite</h6>
+              <h6 class="mb-3 testname passed">OrangeHrmSuite</h6>
               <div class="small">
-                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 14s</span>
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 11s</span>
                 <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
-                  2025-01-23 12:03:38 pm</span>
+                  2025-01-24 12:58:43 pm</span>
                 <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
-                  2025-01-23 12:03:52 pm</span>
+                  2025-01-24 12:58:55 pm</span>
               </div>
               
             </div>
             <div class="col-8">
-                <div class="card mb-1 result failed">
+                <div class="card mb-1 result passed">
                   <div class="card-body">
                     <div class="d-flex justify-content-between">
                       <div>
-                            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
-                        <span class="ms-2">selenium.Testcase.TC02_Login</span>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">selenium.OrangeHRMTestcase.TC02_Login</span>
                       </div>
                       <div>
-                        <span class="badge text-dark bg-light">6s</span>
+                        <span class="badge text-dark bg-light">11s</span>
                       </div>
                     </div>
                     
@@ -147,7 +147,7 @@
           <span class="ms-2">verify_ValidCredentials</span>
         </div>
         <div>
-          <span class="badge text-dark bg-light">5s</span>
+          <span class="badge text-dark bg-light">4s</span>
         </div>
       </div>
       
@@ -157,10 +157,10 @@ nullPassed
           </pre>
         </div>
     </div>
-    <div class="leaf failed">
+    <div class="leaf passed">
       <div class="d-flex justify-content-between mt-3">
         <div>
-            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+            <i class="bi bi-check-circle-fill text-success"></i>
           <span class="ms-2">verify_InalidCredentials</span>
         </div>
         <div>
@@ -168,43 +168,10 @@ nullPassed
         </div>
       </div>
       
-        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertFalse(Assert.java:79)
-	at org.testng.Assert.assertFalse(Assert.java:89)
-	at selenium.Testcase.TC02_Login.verify_InalidCredentials(TC02_Login.java:32)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre>
-        <div class="row mt-3">
-            <div class="embed col-2 mb-1">
-              <img src="resources/940f9bf1-5bb5-4aec-bf35-b846edc6abf6.png" />
-            </div>
+        <div class="mt-3">
+          <pre class="pb-0">
+nullPassed
+          </pre>
         </div>
     </div>
   </div>
@@ -219,22 +186,22 @@ nullPassed
   </div>
 
   <script>
-    const stats1Annotation = {'total': 1, 'passed': 0};
+    const stats1Annotation = {'total': 1, 'passed': 1};
     const stats1 = [
-      { result: 'Passed', count: 0, bg: 'rgb(140, 197, 83)' },
-      { result: 'Failed', count: 1, bg: 'rgb(233,80,113)' },
+      { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+      { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
       { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
     ];
-      const stats2Annotation = {'total': 1, 'passed': 0};
+      const stats2Annotation = {'total': 1, 'passed': 1};
       const stats2 = [
-        { result: 'Passed', count: 0, bg: 'rgb(140, 197, 83)' },
-        { result: 'Failed', count: 1, bg: 'rgb(233,80,113)' },
+        { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
       ];
-      const stats3Annotation = {'total': 2, 'passed': 1};
+      const stats3Annotation = {'total': 2, 'passed': 2};
       const stats3 = [
-        { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
-        { result: 'Failed', count: 1, bg: 'rgb(233,80,113)' },
+        { result: 'Passed', count: 2, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
       ];
      
@@ -284,6 +251,14 @@ nullPassed
                     <td>os.version</td>
                     <td>10.0</td>
                   </tr>
+                  <tr>
+                    <td>Build#</td>
+                    <td>1.0</td>
+                  </tr>
+                  <tr>
+                    <td>Owner Name#</td>
+                    <td>Prasanth V B</td>
+                  </tr>
               </tbody>
             </table>
           </div>
@@ -311,20 +286,20 @@ nullPassed
                   <td>Toggle theme (light/dark)</td>
                 </tr>
                 <tr>
-                  <td>s</td>
-                  <td>Toggle skipped tests</td>
-                </tr>
-                <tr>
-                  <td>p</td>
-                  <td>Toggle passed tests</td>
+                  <td>esc</td>
+                  <td>Reset all filters</td>
                 </tr>
                 <tr>
                   <td>f</td>
                   <td>Toggle failed tests</td>
                 </tr>
                 <tr>
-                  <td>esc</td>
-                  <td>Reset all filters</td>
+                  <td>p</td>
+                  <td>Toggle passed tests</td>
+                </tr>
+                <tr>
+                  <td>s</td>
+                  <td>Toggle skipped tests</td>
                 </tr>
             </tbody>
           </table>

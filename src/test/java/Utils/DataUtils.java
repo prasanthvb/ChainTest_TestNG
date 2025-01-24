@@ -11,7 +11,7 @@ public class DataUtils {
 		data [0][0] = "Admin";
 		data [0][1] = "admin123";
 		
-		data [1][0] = "Gomathi";
+		data [1][0] = "Prasanth";
 		data [1][1] = "December";
 		
 		return data;

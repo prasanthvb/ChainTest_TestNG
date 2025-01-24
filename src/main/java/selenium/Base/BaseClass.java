@@ -8,8 +8,11 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+import com.aventstack.chaintest.service.ChainPluginService;
 
 public class BaseClass {
 	Properties prop = null;
@@ -29,16 +32,34 @@ public class BaseClass {
 	}
 
 	// Start web browser
-	@BeforeTest
-	public void initTest() {
-		setDriver(new ChromeDriver());
-		getDriver().manage().window().maximize();
-		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		getDriver().get(prop.getProperty("URL"));
-	}
-
+	public void initTest(String url, String browserName) {	
+		System.out.println("Launching test in : " + browserName);
+        ChainPluginService.getInstance().addSystemInfo("Build#", "1.0");
+        ChainPluginService.getInstance().addSystemInfo("Owner Name#", "Prasanth V B");
+        switch (browserName.toLowerCase().trim()) {
+            case "chrome":
+            	setDriver(new ChromeDriver());
+                break;
+            case "firefox":
+            	setDriver(new FirefoxDriver());
+                break;
+            case "edge":
+            	setDriver(new EdgeDriver());
+                break;
+            case "safari":
+            	setDriver(new SafariDriver());
+                break;
+            default:
+                System.out.println("Please enter the right browser name...." + browserName);
+                throw new IllegalArgumentException("Wrong Browser : " + browserName);
+        }
+        getDriver().manage().window().maximize();
+        getDriver().manage().deleteAllCookies();
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		getDriver().get(url);
+    }
+	
 	// Tear down
-	@AfterClass
 	public void tearDown() {
 		if (getDriver() != null) {
 			getDriver().quit();

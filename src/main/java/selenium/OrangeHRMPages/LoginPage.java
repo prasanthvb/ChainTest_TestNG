@@ -1,4 +1,4 @@
-package selenium.Pages;
+package selenium.OrangeHRMPages;
 
 import java.time.Duration;
 

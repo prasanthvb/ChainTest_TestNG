@@ -1,12 +1,12 @@
-package selenium.Testcase;
+package selenium.CandyMapperTestcase;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import selenium.Base.BaseClass;
-import selenium.Pages.DashboardPage;
-import selenium.Pages.LoginPage;
+import selenium.OrangeHRMPages.DashboardPage;
+import selenium.OrangeHRMPages.LoginPage;
 
 public class TC02_Login extends BaseClass {
 	LoginPage loginPage;

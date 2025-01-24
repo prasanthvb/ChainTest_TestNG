@@ -1,14 +1,16 @@
-package selenium.Testcase;
+package selenium.OrangeHRMTestcase;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.chaintest.plugins.ChainTestListener;
 
 import selenium.Base.BaseClass;
-import selenium.Pages.DashboardPage;
-import selenium.Pages.LoginPage;
+import selenium.OrangeHRMPages.DashboardPage;
+import selenium.OrangeHRMPages.LoginPage;
 
 @Listeners(ChainTestListener.class)
 public class TC01_Login extends BaseClass {
@@ -16,7 +18,8 @@ public class TC01_Login extends BaseClass {
 	DashboardPage dashboardPage;
 
 	@BeforeClass
-	public void setup() {
+	public void setup(String url, String browserName) {
+		initTest(url, browserName);
 		loginPage = new LoginPage(getDriver());
 		dashboardPage = new DashboardPage(getDriver());
 	}
@@ -35,5 +38,10 @@ public class TC01_Login extends BaseClass {
 
 //		test.fail("The dashboard is working as expected",
 //				MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getscreenBase64(getDriver())).build());
+	}
+	
+	@AfterClass(alwaysRun = true)
+	public void close() {
+		super.tearDown();
 	}
 }
