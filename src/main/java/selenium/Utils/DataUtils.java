@@ -1,4 +1,4 @@
-package Utils;
+package selenium.Utils;
 
 import org.testng.annotations.DataProvider;
 

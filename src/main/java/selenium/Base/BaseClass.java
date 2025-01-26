@@ -55,7 +55,7 @@ public class BaseClass {
         }
         getDriver().manage().window().maximize();
         getDriver().manage().deleteAllCookies();
-		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		getDriver().get(url);
     }
 	

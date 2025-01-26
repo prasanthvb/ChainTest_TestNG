@@ -4,24 +4,33 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestUtil {
-	WebDriver driver;
+	static WebDriver driver;
 
 	public TestUtil(WebDriver driver) {
-		this.driver = driver;
+		TestUtil.driver = driver;
 	}
 
-	public WebElement findelement(By ele) {
+	public static WebElement findelement(By ele) {
 		WebElement element = driver.findElement(ele);
+		return element;
+	}
+
+	public static List<WebElement> findelements(By ele) {
+		List<WebElement> element = driver.findElements(ele);
 		return element;
 	}
 
@@ -60,7 +69,7 @@ public class TestUtil {
 
 	public static void waitforsec(int sec) {
 		try {
-			Thread.sleep(Duration.ofSeconds(sec * 1000));
+			Thread.sleep(Duration.ofSeconds(sec));
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -74,5 +83,30 @@ public class TestUtil {
 
 	public void tab(WebElement element) {
 		element.sendKeys(Keys.TAB);
+	}
+
+	// Explicit Wait for Element To Be Visible.
+	public static void waitForElementToBeVisible(By locator) {
+		new WebDriverWait(driver, Duration.ofSeconds(30))
+				.until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
+	}
+
+	// Explicit Wait for Element To Be Clickable.
+	public static void waitForElementToBeClickable(By locator) {
+		new WebDriverWait(driver, Duration.ofSeconds(30))
+				.until(ExpectedConditions.elementToBeClickable(driver.findElement(locator)));
+	}
+
+	public static void javaScriptClick(By element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", findelement(element));
+	}
+
+	public static void switchToframe(By element) {
+		driver.switchTo().frame(findelement(element));
+	}
+
+	public static void switchTodefaultContent() {
+		driver.switchTo().defaultContent();
 	}
 }
